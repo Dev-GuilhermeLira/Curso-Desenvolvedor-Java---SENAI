@@ -1,0 +1,254 @@
+/* Configurações Gerais do Corpo da Página */
+body {
+    /* Imagem de fundo de uma pantera estilizada em alta resolução */
+    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://unsplash.com'); 
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center top; /* Centraliza a pantera no topo */
+    background-attachment: fixed; /* Efeito Parallax: o fundo fica fixo enquanto você rola a página */
+    background-color: #0c0c0c; 
+    color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+/* Títulos principais e subtítulos */
+h1 {
+    font-family: Impact, sans-serif; 
+    color: #000000; /* Texto preto */
+    background-color: #ffffff; /* Fundo branco que inicia aqui */
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 0; /* Remove todas as margens para não quebrar o fundo */
+    padding: 25px 0 25px 0; /* Espaçamento interno: mais espaço acima, menos abaixo */
+    text-transform: uppercase;
+    border-bottom: 2px solid #111111; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra projetada no final do bloco */
+}
+
+h2 {
+    background-color: #1a1a1a; /* CORRIGIDO: Mudado de grey para cinza escuro da tabela */
+    color: #ffffff; /* CORRIGIDO: Texto explicitamente branco para legibilidade */
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+/* Listas Centralizadas */
+ol, ul { 
+    display: table; 
+    margin: auto; 
+    text-align: left; /* Mantém o texto alinhado à esquerda dentro do bloco centralizado */
+}
+
+.banner-container {
+    width: 100%;
+    height: 500px;
+    /* Fundo com degradê moderno nas cores da pantera */
+    background: linear-gradient(135px, #000000 0%, #1a1a1a 50%, #262626 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 4px solid #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsividade e ajustes da Imagem principal */
+.banner-logo {
+    max-height: 600px; /* Garante tamanho ideal e proporcional */
+    width: auto;
+    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.7)); /* Sombra realista no logo */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animação suave para carregar o logo */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade e ajustes do íCone do título */
+.iconTitulo {
+    width: auto;
+    height: 75px; /* Altura ideal proporcional ao tamanho da fonte do h1 */
+    vertical-align: middle; /* Alinha o centro da imagem com o centro do texto */
+    margin-right: 5px; /* Espaço cirúrgico entre a pantera e as letras */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Estilização Geral de Tabelas */
+table {
+    width: 100%;
+    max-width: 800px; /* Evita que a tabela fique esticada demais em telas grandes */
+    border-collapse: collapse; /* Remove o espaçamento duplo das bordas */
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #1a1a1a; /* Fundo cinza escuro para os dados */
+    color: #ffffff; /* Texto branco para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que os cantos arredondados funcionem nas bordas */
+}
+
+thead tr {
+    background-color: #111111; /* Preto predominante da FURIA */
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #ffffff; /* Linha branca marcante abaixo do cabeçalho */
+}
+
+/* Espaçamento interno das células (linhas e colunas) */
+th, td {
+    padding: 12px 15px;
+    vertical-align: middle; /* Alinha o texto e as bandeiras perfeitamente ao centro */
+}
+
+/* Efeito zebra (linhas alternadas) */
+tbody tr:nth-of-type(even) {
+    background-color: #262626; /* Um cinza um pouco mais claro para alternar */
+}
+
+/* Efeito ao passar o mouse sobre as linhas (Hover) */
+tbody tr:hover {
+    background-color: #333333; /* Destaca a linha que o usuário está lendo */
+    transition: background-color 0.2s ease;
+}
+
+/* Alinhamento e arredondamento das imagens das bandeiras dentro das tabelas */
+table img {
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Deixar os nomes destacados em itálico ou com um toque sutil */
+table td b {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Botões / Links de Destaque */
+.btn-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #111111; /* Preto predominante da FURIA */
+    color: #ffffff; /* Texto branco */
+    text-decoration: none; /* Remove o sublinhado padrão de link */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; /* Deixa o texto em caixa alta */
+    letter-spacing: 1px; /* Espaçamento moderno entre as letras */
+    border: 2px solid #ffffff; /* Borda branca marcante */
+    border-radius: 4px; /* Cantos levemente suavizados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil para dar profundidade */
+    transition: all 0.3s ease; /* Transição suave para as animações */
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.btn-link:hover {
+    background-color: #ffffff; /* Inverte o fundo para branco */
+    color: #111111; /* Inverte o texto para preto */
+    border-color: #111111; /* Altera a borda para preto */
+    transform: translateY(-3px); /* Levanta o botão levemente */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Aumenta a sombra no hover */
+}
+
+/* Efeito ao clicar no botão (Active) */
+.btn-link:active {
+    transform: translateY(-1px); /* Abaixa levemente simulando o clique */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Contêiner que segura as duas colunas */
+.video-section-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o texto vá para baixo em telas pequenas de celular */
+    max-width: 950px; /* Largura total ideal para a seção */
+    margin: 30px auto; /* Centraliza a seção inteira na tela */
+    gap: 30px; /* Espaço cirúrgico entre o vídeo e o bloco de texto */
+    align-items: center; /* Alinha o vídeo e o texto perfeitamente pelo centro vertical */
+    padding: 0 20px;
+}
+
+/* Bloco do Vídeo (Ocupa a metade esquerda) */
+.video-block {
+    flex: 1;
+    min-width: 320px; /* Limite mínimo de tamanho para telas menores */
+    max-width: 500px; /* Reduziu o tamanho para o vídeo não ficar gigante */
+    position: relative;
+    padding-bottom: 27%; /* Controla a altura proporcional widescreen */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+    border: 2px solid #333333;
+}
+
+/* Força o player a obedecer os limites do bloco */
+.video-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Bloco de Texto (Ocupa a metade direita) */
+.text-block {
+    flex: 1;
+    min-width: 300px;
+    text-align: left; /* Texto alinhado à esquerda estilo portal de notícias */
+}
+
+.text-block h3 {
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.text-block p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+
+/* Alinhamento de imagens pequenas (Bandeiras) */
+.flag {
+    vertical-align: middle;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+    margin: 15px 0;
+}
+
+/* Rodapé */
+footer {
+    font-style: italic;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #111111; /* Adicionado fundo sutil para destacar a área do rodapé */
+    color: #888888;
+}

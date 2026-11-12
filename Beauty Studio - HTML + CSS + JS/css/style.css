@@ -1,0 +1,1201 @@
+
+/* =========================
+   1. CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco: #F9F9F9;
+    --cinza-claro: #E9E9E9;
+    --cinza-suave: #C8C8C8;
+    --cinza-medio: #888888;
+    --grafite: #3D3D3D;
+    --preto: #222222;
+}
+
+body {
+    background-color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--preto);
+}
+
+
+/* =========================
+   2. CABEÇALHO
+========================= */
+
+.cabecalho {
+    width: 100%;
+    min-height: 110px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+/* LOGOTIPO */
+
+.logo {
+    display: block;
+    width: 220px;
+    height: 95px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 44%;
+    display: block;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: var(--grafite);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--cinza-medio);
+}
+
+/* LINK ATIVO */
+
+.menu a.ativo {
+    color: var(--preto);
+    font-weight: 600;
+    border-bottom: 1px solid var(--preto);
+    padding-bottom: 5px;
+}
+
+/* BOTÃO */
+
+.botao-agendar {
+    background-color: var(--grafite);
+    color: var(--branco);
+
+    padding: 13px 22px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botao-agendar:hover {
+    background-color: var(--preto);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   3. BANNER PRINCIPAL
+========================= */
+
+.banner {
+    min-height: 600px;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+/* TEXTO DO BANNER */
+
+.banner-texto {
+    flex: 1;
+    max-width: 520px;
+}
+
+.subtitulo {
+    color: var(--cinza-medio);
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.banner-texto h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 65px;
+    line-height: 1.15;
+    font-weight: 500;
+
+    margin: 25px 0;
+}
+
+.banner-texto h1 span {
+    color: var(--cinza-medio);
+}
+
+.banner-texto p {
+    color: var(--cinza-medio);
+
+    font-size: 14px;
+    line-height: 2;
+
+    max-width: 420px;
+    margin-bottom: 35px;
+}
+
+
+/* BOTÃO DO BANNER */
+
+.botao-banner {
+    display: inline-block;
+
+    background-color: var(--grafite);
+    color: var(--branco);
+
+    padding: 16px 30px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botao-banner:hover {
+    background-color: var(--preto);
+    transform: translateY(-3px);
+}
+
+
+/* IMAGEM DO BANNER */
+
+.banner-imagem {
+    flex: 1;
+    max-width: 520px;
+    height: 430px;
+}
+
+.banner-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+}
+
+
+/* =========================
+   4. RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        padding: 0 4%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .banner {
+        padding: 60px 5%;
+        gap: 30px;
+    }
+
+    .banner-texto h1 {
+        font-size: 48px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        height: auto;
+        padding: 25px 5%;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 165px;
+        height: 75px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .botao-agendar {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 50px 7%;
+    }
+
+    .banner-texto {
+        text-align: center;
+    }
+
+    .banner-texto h1 {
+        font-size: 43px;
+    }
+
+    .banner-texto p {
+        margin: 0 auto 30px;
+    }
+
+    .banner-imagem {
+        width: 100%;
+        height: 350px;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA DE SERVIÇOS             */
+/* ============================= */
+
+.ativo {
+    color: var(--preto);
+    font-weight: 600;
+    border-bottom: 1px solid var(--preto);
+    padding-bottom: 5px;
+}
+
+.servicos-intro {
+    text-align: center;
+    padding: 90px 20px 60px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--cinza-medio);
+    margin-bottom: 20px;
+}
+
+.servicos-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--preto);
+    margin-bottom: 20px;
+}
+
+.servicos-intro > p:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--cinza-medio);
+}
+
+
+/* CARDS DE SERVIÇOS */
+
+.servicos-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 40px 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 35px;
+}
+
+.servico-card {
+    background-color: var(--branco);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-imagem {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.servico-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.servico-card:hover .servico-imagem img {
+    transform: scale(1.04);
+}
+
+.servico-info {
+    padding: 25px 5px;
+}
+
+.servico-info span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: var(--cinza-medio);
+    letter-spacing: 2px;
+}
+
+.servico-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--preto);
+    margin: 12px 0;
+}
+
+.servico-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--cinza-medio);
+}
+
+
+/* CHAMADA PARA AGENDAMENTO */
+
+.servicos-cta {
+    background-color: var(--cinza-claro);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.servicos-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+.servicos-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--grafite);
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--grafite);
+}
+
+/* RODAPÉ */
+
+.footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .servicos-intro {
+        padding: 65px 20px 40px;
+    }
+
+    .servicos-intro h1 {
+        font-size: 38px;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+        padding: 20px 25px 70px;
+        gap: 30px;
+    }
+
+    .servico-imagem {
+        height: 280px;
+    }
+
+    .servicos-cta h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .servicos-intro h1 {
+        font-size: 32px;
+    }
+
+    .servico-imagem {
+        height: 230px;
+    }
+
+    .servico-info h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA DE AGENDAMENTO          */
+/* ============================= */
+
+.agendamento-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 20px 45px;
+}
+
+.agendamento-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--preto);
+    margin: 20px 0;
+}
+
+.agendamento-intro > p:last-child {
+    color: var(--cinza-medio);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CONTAINER */
+
+.agendamento-container {
+    padding: 20px 20px 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.agendamento-card {
+    width: 100%;
+    max-width: 750px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--cinza-claro);
+    padding: 45px;
+}
+
+.agendamento-titulo {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.agendamento-titulo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.agendamento-titulo p {
+    color: var(--cinza-medio);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* CAMPOS */
+
+.form-agendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+}
+
+.campo label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--grafite);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--cinza-suave);
+    background-color: var(--branco);
+    color: var(--grafite);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    outline: none;
+    border-radius: 2px;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--grafite);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: var(--cinza-medio);
+}
+
+
+/* CAMPOS LADO A LADO */
+
+.campo-duplo {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* BOTÃO */
+
+.botao-formulario {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao-formulario:hover {
+    background-color: var(--grafite);
+}
+
+
+/* AVISO */
+
+.aviso-formulario {
+    color: var(--cinza-medio);
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 650px) {
+
+    .agendamento-intro {
+        padding: 55px 20px 35px;
+    }
+
+    .agendamento-intro h1 {
+        font-size: 36px;
+    }
+
+    .agendamento-card {
+        padding: 30px 20px;
+    }
+
+    .agendamento-titulo h2 {
+        font-size: 25px;
+    }
+
+    .campo-duplo {
+        flex-direction: column;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA SOBRE                   */
+/* ============================= */
+
+.sobre-intro {
+    text-align: center;
+    margin: 0 auto;
+    padding: 85px 20px 65px;
+    background-color: var(--cinza-claro);
+}
+
+.sobre-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 20px 0;
+}
+
+.sobre-intro > p:last-child {
+    color: var(--cinza-medio);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* APRESENTAÇÃO */
+
+.sobre-conteudo {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 30px 40px 100px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-imagem {
+    height: 450px;
+    background-color: var(--cinza-claro);
+    overflow: hidden;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.sobre-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin: 18px 0 25px;
+}
+
+.sobre-texto p:not(.subtitulo) {
+    font-size: 13px;
+    color: var(--cinza-medio);
+    line-height: 2;
+    margin-bottom: 17px;
+}
+
+
+/* DIFERENCIAIS */
+
+.sobre-diferenciais {
+    background-color: var(--cinza-claro);
+    padding: 80px 8%;
+}
+
+.sobre-diferenciais-titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sobre-diferenciais-titulo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.diferenciais-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.diferencial-card {
+    background-color: var(--branco);
+    padding: 35px 25px;
+}
+
+.diferencial-card span {
+    color: var(--cinza-medio);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.diferencial-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 18px 0 12px;
+}
+
+.diferencial-card p {
+    color: var(--cinza-medio);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* AVALIAÇÕES */
+
+.sobre-avaliacoes {
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.sobre-avaliacoes h2 {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.avaliacao-nota strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.avaliacao-nota span {
+    display: block;
+    color: #A58B5A;
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 8px 0;
+}
+
+.avaliacao-nota p {
+    color: var(--cinza-medio);
+    font-size: 12px;
+}
+
+.avaliacao-descricao {
+    max-width: 600px;
+    margin: 25px auto;
+    color: var(--cinza-medio);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.botao-avaliacoes {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid var(--grafite);
+    color: var(--grafite);
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.botao-avaliacoes:hover {
+    background-color: var(--grafite);
+    color: var(--branco);
+}
+
+
+/* CHAMADA FINAL */
+
+.sobre-cta {
+    background-color: var(--cinza-claro);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.sobre-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.sobre-cta p {
+    color: var(--grafite);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .sobre-intro {
+        padding: 60px 20px 40px;
+    }
+
+    .sobre-intro h1 {
+        font-size: 36px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        padding: 20px 25px 70px;
+        gap: 35px;
+    }
+
+    .sobre-imagem {
+        height: 300px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 32px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-diferenciais-titulo h2,
+    .sobre-avaliacoes h2,
+    .sobre-cta h2 {
+        font-size: 29px;
+    }
+}
+
+/* ============================= */
+/* PÁGINA GALERIA                 */
+/* ============================= */
+
+.galeria-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 85px 20px 55px;
+}
+
+.galeria-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--preto);
+    margin: 20px 0;
+}
+
+.galeria-intro > p:last-child {
+    color: var(--cinza-medio);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* GRID DE FOTOGRAFIAS */
+
+.galeria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px 100px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.galeria-item {
+    height: 350px;
+    overflow: hidden;
+    background-color: var(--cinza-claro);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* CHAMADA PARA AGENDAMENTO */
+
+.galeria-cta {
+    background-color: var(--cinza-claro);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.galeria-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+.galeria-cta p {
+    color: var(--grafite);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-item {
+        height: 320px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .galeria-intro {
+        padding: 60px 20px 40px;
+    }
+
+    .galeria-intro h1 {
+        font-size: 36px;
+    }
+
+    .galeria-container {
+        padding: 20px 20px 70px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .galeria-item {
+        height: 350px;
+    }
+
+    .galeria-cta h2 {
+        font-size: 29px;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA CONTATO                 */
+/* ============================= */
+
+.contato-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 85px 20px 60px;
+}
+
+.contato-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.contato-intro > p:last-child {
+    color: var(--cinza-medio);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CONTEÚDO */
+
+.contato-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 40px 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contato-info h2,
+.contato-horarios h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin: 20px 0 35px;
+    line-height: 1.3;
+}
+
+
+/* ITENS DE CONTATO */
+
+.contato-item {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.contato-item > span {
+    color: var(--cinza-medio);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.contato-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.contato-item p {
+    color: var(--cinza-medio);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.contato-item a {
+    color: var(--grafite);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cinza-suave);
+    padding-bottom: 3px;
+}
+
+.contato-item a:hover {
+    color: var(--cinza-medio);
+}
+
+
+/* HORÁRIOS */
+
+.contato-horarios {
+    background-color: var(--cinza-claro);
+    padding: 45px 35px;
+    align-self: start;
+}
+
+.contato-horarios h2 {
+    margin-bottom: 20px;
+}
+
+.contato-horarios > p:not(.subtitulo) {
+    color: var(--grafite);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+
+/* CHAMADA FINAL */
+
+.contato-cta {
+    background-color: var(--cinza-claro);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.contato-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contato-cta p {
+    color: var(--grafite);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .contato-intro {
+        padding: 60px 20px 40px;
+    }
+
+    .contato-intro h1 {
+        font-size: 36px;
+    }
+
+    .contato-container {
+        grid-template-columns: 1fr;
+        padding: 20px 25px 70px;
+        gap: 40px;
+    }
+
+    .contato-info h2,
+    .contato-horarios h2 {
+        font-size: 29px;
+    }
+
+    .contato-horarios {
+        padding: 35px 25px;
+    }
+
+    .contato-cta h2 {
+        font-size: 29px;
+    }
+
+}

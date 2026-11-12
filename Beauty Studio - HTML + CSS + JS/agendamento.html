@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendamento | Beauty Studio Kátia Souza</title>
+
+    <link rel="icon" href="Imagens/FavIcon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="css/form.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <img src="Imagens/Logo.png" alt="Beauty Studio Kátia Souza">
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <a href="agendamento.html" class="botao-agendar">
+            Agendar horário
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+        <section class="agendamento-intro">
+
+            <p class="subtitulo">BEAUTY STUDIO KÁTIA SOUZA</p>
+
+            <h1>Agende seu horário</h1>
+
+            <p>
+                Reserve um momento especial para cuidar de você.
+                Preencha os campos abaixo com suas preferências.
+            </p>
+
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="agendamento-container">
+
+            <div class="agendamento-card">
+
+                <div class="agendamento-titulo">
+                    <h2>Solicitação de agendamento</h2>
+
+                    <p>
+                        Informe seus dados e escolha o serviço desejado.
+                    </p>
+                </div>
+
+                <form class="form-agendamento" id="formAgendamento">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required>
+                    </div>
+        
+                    <div class="campo">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 0 0000-0000"
+                            maxlength="16"
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            required>
+                    </div>
+        
+                    <div class="campo">
+                        <label for="servico">Serviço desejado</label>
+        
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Manicure tradicional">Manicure tradicional</option>
+                            <option value="Esmaltação em gel">Esmaltação em gel</option>
+                            <option value="Alongamento de unhas">Alongamento de unhas</option>
+                            <option value="Nail art">Nail art</option>
+                        </select>
+                    </div>
+        
+                    <div class="campo-duplo">
+        
+                        <div class="campo">
+                            <label for="data">Data desejada</label>
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                                required>
+                        </div>
+        
+                        <div class="campo">
+                            <label for="horario">Horário desejado</label>
+        
+                            <select id="horario" name="horario" required>
+                                <option value="">Selecione</option>
+                                <option value="07:00">07:00</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+        
+                    </div>
+        
+                    <div class="campo">
+                        <label for="observacoes">Observações (opcional)</label>
+        
+                        <textarea
+                            id="observacoes"
+                            name="observacoes"
+                            rows="4"
+                            placeholder="Conte-nos algum detalhe ou preferência..."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-formulario">
+                        Solicitar agendamento
+                    </button>
+
+                    <p class="aviso-formulario">
+                        Sua solicitação será encaminhada pelo WhatsApp.
+                        O agendamento dependerá da confirmação do Studio.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <p>© 2026 Beauty Studio Kátia Souza. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+    </body>
+    </html>
+    
+
+</html>
