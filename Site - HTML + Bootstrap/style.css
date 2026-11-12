@@ -1,0 +1,65 @@
+:root {
+  --fundo: #000000;
+  --painel: #141414;
+  --borda: #2a2a2a;
+  --laranja: #ff8c1a;
+  --laranja-escuro: #e07400;
+}
+
+body {
+  background: var(--fundo);
+  color: #f2f2f2;
+}
+
+.titulo { color: var(--laranja); }
+.laranja { color: var(--laranja); }
+
+.painel {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 0.75rem;
+}
+.painel .card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--borda);
+}
+.painel .list-group-item {
+  background: transparent;
+  border-color: var(--borda);
+  color: inherit;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  background-color: #0b0b0b;
+  border-color: var(--borda);
+  color: #f2f2f2;
+}
+.form-control:focus,
+.form-select:focus {
+  background-color: #0b0b0b;
+  color: #fff;
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 26, 0.25);
+}
+.input-group-text { color: var(--laranja); font-weight: 600; }
+
+.btn-laranja {
+  background: var(--laranja);
+  border-color: var(--laranja);
+  color: #000;
+  font-weight: 600;
+}
+.btn-laranja:hover,
+.btn-laranja:focus {
+  background: var(--laranja-escuro);
+  border-color: var(--laranja-escuro);
+  color: #000;
+}
+
+.resultado-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--laranja);
+}
