@@ -76,3 +76,16 @@
     this.value = telefoneFormatado;
 
 });
+
+// Validação: exige exatamente 11 dígitos
+campoTelefone.addEventListener("blur", function () {
+
+    const numeros = this.value.replace(/\D/g, "");
+
+    if (numeros.length < 11) {
+        this.setCustomValidity("Informe um telefone com 11 dígitos.");
+    } else {
+        this.setCustomValidity("");
+    }
+
+});
