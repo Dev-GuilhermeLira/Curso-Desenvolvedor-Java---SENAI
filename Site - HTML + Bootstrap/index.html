@@ -44,6 +44,9 @@
                                 Converter para
                             </label>
                             <select class="form-select" id="moeda">
+                                <option value="" selected disabled>
+                                    Escolha a moeda
+                                </option>
                                 <option value="dolar">
                                     Dólar (US$)
                                 </option>
@@ -104,9 +107,14 @@
                     </div>
                 </div>
 
-                <p class="text-secondary small mt-3 mb-0">
-                    Cotações de referência do dia 03/11/26.
-                </p>
+                <div class="d-flex align-items-center justify-content-between gap-2 mt-3">
+                    <span class="text-secondary small" id="statusCotacao">
+                        Carregando cotações...
+                    </span>
+                    <button id="btnAtualizar" class="btn btn-sm btn-contorno-laranja">
+                        Atualizar cotações
+                    </button>
+                </div>
             </div>
         </div>
     </main>
